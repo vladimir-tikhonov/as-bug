@@ -1,19 +1,21 @@
 ```bash
 npm i
 npm run asbuild
+npx http-server
 ```
 
 Stack trace:
 ```
-ERROR: AssertionError: assertion failed
-    at t.assert (~/node_modules/assemblyscript/dist/assemblyscript.js:1:557060)
-    at d.compileCallExpression (~/node_modules/assemblyscript/dist/assemblyscript.js:1:287788)
-    at d.compileExpression (~/node_modules/assemblyscript/dist/assemblyscript.js:1:246806)
-    at d.compileExpressionStatement (~/node_modules/assemblyscript/dist/assemblyscript.js:1:235475)
-    at d.compileStatement (~/node_modules/assemblyscript/dist/assemblyscript.js:1:231817)
-    at d.compileStatements (~/node_modules/assemblyscript/dist/assemblyscript.js:1:232764)
-    at d.compileFunctionBody (~/node_modules/assemblyscript/dist/assemblyscript.js:1:222368)
-    at d.compileFunction (~/node_modules/assemblyscript/dist/assemblyscript.js:1:224809)
-    at d.ensureConstructor (~/node_modules/assemblyscript/dist/assemblyscript.js:1:317317)
-    at d.compileInstantiate (~/node_modules/assemblyscript/dist/assemblyscript.js:1:318909)
+index.js:5 abort called at index.ts:243:13
+    abort	@	index.js:5
+    ~lib/rt/tlsf/insertBlock	@	wasm-a0e76066:3
+    ~lib/rt/tlsf/reallocateBlock	@	wasm-a0e76066:29
+    ~lib/rt/tlsf/__realloc	@	wasm-a0e76066:30
+    ~lib/array/ensureSize	@	wasm-a0e76066:32
+    ~lib/array/Array<i32>#push	@	wasm-a0e76066:33
+    assembly/index/willFail	@	wasm-a0e76066:35
+    (anonymous)	@	index.js:14
+    async function (async)		
+    (anonymous)	@	index.js:9
+    (anonymous)	@	index.js:15
 ```

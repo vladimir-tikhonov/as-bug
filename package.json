@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "asbuild:untouched": "asc assembly/parent.ts -b build/untouched.wasm -t build/untouched.wat --validate --sourceMap --debug",
-    "asbuild:optimized": "asc assembly/parent.ts -b build/optimized.wasm -t build/optimized.wat --validate --sourceMap --optimize",
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --validate --sourceMap --debug",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --validate --sourceMap --optimize",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "assemblyscript": "^0.8.1-nightly.20191219"
+    "assemblyscript": "^0.8.1-nightly.20191221",
+    "http-server": "^0.12.0",
+    "typescript": "^3.7.3"
   },
-  "dependencies": {
-    "@assemblyscript/loader": "^0.8.1-nightly.20191219"
-  }
+  "dependencies": {}
 }
